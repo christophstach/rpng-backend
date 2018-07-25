@@ -1,0 +1,10 @@
+type Subscription {
+    # Is fired when a user was created.
+    userCreated: User
+
+    # Is fired when a user was updated.
+    userUpdated: User
+
+    # Is fired when a user was deleted.
+    userDeleted: User
+}

@@ -1,0 +1,34 @@
+type Mutation {
+    # Registers a new user to the application.
+    register(
+        email: String!
+        username: String!
+        password: String!
+        passwordRepeated: String!
+        firstName: String
+        lastName: String
+    ): User
+
+    # Login to the application.
+    login(
+        email: String!
+        password: String!
+    ): String
+
+    # Verifies a user by a  given token.
+    verify(
+        token: String!
+    ): User
+
+    # Request a token to reset the password. The token is being sent to the users email adress.
+    requestPasswordResetToken(
+        email: String!
+    ): User
+
+    # Resets the users password with a valid token.
+    resetPassword(
+        token: String!
+        password: String!
+        passwordRepeated: String!
+    ): User
+}

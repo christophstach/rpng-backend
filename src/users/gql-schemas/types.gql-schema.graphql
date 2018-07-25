@@ -1,0 +1,16 @@
+# A user can login to the application.
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    roles: [UserRole]
+    firstName: String
+    lastName: String
+}
+
+# All available user roles.
+enum UserRole {
+    SUPERADMIN,
+    ADMIN,
+    USER,
+}

@@ -1,0 +1,11 @@
+type Query {
+    # Get one user by his id.
+    #
+    # Roles: Admin, Superadmin
+    getUser(id: ID!): User
+
+    # Get a list of all users.
+    #
+    # Roles: Admin, Superadmin
+    getUsers: [User]
+}

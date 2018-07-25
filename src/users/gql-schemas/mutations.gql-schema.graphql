@@ -1,0 +1,23 @@
+type Mutation {
+    # Creates a new user.
+    createUser(
+        email: String!
+        username: String!
+        firstName: String
+        lastName: String
+    ): User
+
+    # Updates an existing user.
+    updateUser(
+        id: ID!
+        email: String!
+        username: String!
+        firstName: String
+        lastName: String
+    ): User
+
+    # Deletes a user
+    deleteUser(
+        id: ID!
+    ): User
+}
