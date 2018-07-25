@@ -16,7 +16,7 @@
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "webpack": "webpack --config webpack.config.js",
-    "deploy:gcloud": "npm run build && gcloud app deploy"
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@nestjs/common": "^5.0.0",
